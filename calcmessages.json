@@ -1,5 +1,8 @@
+
+
 {
   "en" : {
+"enter": "Enter language code (e.g., 'en' for English):",
 "hi":"Welcome to Calculator!",
 "first":"What's the first number?",
 "second":"What's the second number?",
@@ -8,7 +11,8 @@
 "amust":"Must choose 1, 2, 3 or 4",
 "like":"Would you like another operation? \n1) Yes 2) No",
 "bmust":"Must choose 1 or 2",
-"thx":"Thanks for passing by!"
+"thx":"Thanks for passing by!",
+"result": "The result is: "
   }
 }
 
