@@ -1,4 +1,6 @@
+const messages = require('./calculator_messages.json');
 const readline = require('readline-sync');
+
 
 function prompt(message) {
   console.log(`=> ${message}`);
@@ -8,30 +10,30 @@ function invalidNumber(number) {
   return number.trimStart() === '' || Number.isNaN(Number(number));
 }
 
-prompt('Welcome to Calculator!');
+prompt(messages.hi);
 
 function calculator() {
-  prompt("What's the first number?");
+  prompt(messages.first);
   let number1 = readline.question();
   
   while (invalidNumber(number1)) {
-    prompt("Hmm... that doesn't look like a valid number.");
+    prompt(messages.hmm);
     number1 = readline.question();
   }
   
-  prompt("What's the second number?");
+  prompt(messages.second);
   let number2 = readline.question();
   
   while (invalidNumber(number2)) {
-    prompt("Hmm... that doesn't look like a valid number.");
+    prompt(messages.hmm);
     number2 = readline.question();
   }
   
-  prompt('What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide');
+  prompt(messages.operation);
   let operation = readline.question();
   
   while (!['1', '2', '3', '4'].includes(operation)) {
-    prompt('Must choose 1, 2, 3 or 4')
+    prompt(messages.amust);
     operation = readline.question();
   }
   
@@ -55,13 +57,15 @@ function calculator() {
 }
  
 calculator();
+
+function roundb() {  
+  prompt(messages.like);
+  let another = readline.question();
+  another === '1' ? calculator() : console.log(messages.thx);
   
-prompt('Would you like another operation? \n1) Yes 2) No');
-let another = readline.question();
-
-while (!['1', '2'].includes(another)) {
-  prompt('Must choose 1 or 2');
+  while (!['1', '2'].includes(another)) {
+  prompt(messages.bmust);
   another = readline.question();
+  }
 }
-
-another === 1 ? calculator() : console.log('Thanks for passing by!');
+roundb();

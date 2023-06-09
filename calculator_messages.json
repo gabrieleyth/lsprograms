@@ -1,0 +1,11 @@
+{
+"hi":"Welcome to Calculator!",
+"first":"What's the first number?",
+"second":"What's the second number?",
+"hmm":"Hmm... that doesn't look like a valid number.",
+"operation":"What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide",
+"amust":"Must choose 1, 2, 3 or 4",
+"like":"Would you like another operation? \n1) Yes 2) No",
+"bmust":"Must choose 1 or 2",
+"thx":"Thanks for passing by!"
+}
