@@ -11,7 +11,7 @@ function invalidNumber(number) {
 
 prompt('hi');
 
-prompt("Enter language code (e.g., 'en' for English):");
+prompt('enter');
 let languageCode = readline.question();
 
 function calculator() {
@@ -55,7 +55,8 @@ function calculator() {
       break;
   }
   
-  prompt(`The result is: ${output}`, languageCode);
+  prompt('result', languageCode);
+  console.log(output);
 }
  
 calculator();
